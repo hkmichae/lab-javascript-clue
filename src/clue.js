@@ -93,6 +93,26 @@ const weaponsArray = [
  { name: 'pistol',       weight: 20 },
 ];
 
-// ITERATION 2
+// ITERATION 2: Create the mystery
+
+function selectRandom(cardArr) {
+    if (cardArr.length == 0) {
+        return undefined
+    } else if (cardArr.length ==1) {
+        return cardArr[0]
+    }
+    return cardArr[(Math.floor(Math.random() * cardArr.length))]
+}
+
+let mysteryCard = {};
+
+function pickMystery() {
+    
+     mysteryCard['suspect'] = selectRandom(suspectsArray)
+     mysteryCard['weapon'] = selectRandom(weaponsArray)
+     mysteryCard['room'] = selectRandom(roomsArray)
+
+    return mysteryCard
+}
 
 // ITERATION 3
