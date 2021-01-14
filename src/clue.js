@@ -115,4 +115,20 @@ function pickMystery() {
     return mysteryCard
 }
 
-// ITERATION 3
+// ITERATION 3: Reveal the mystery
+
+let envelopeObj = {};
+
+function revealMystery(envelopeObj) {
+    console.log(envelopeObj)
+    // envelopeObj['suspect'] = selectRandom(suspectsArray)
+    // envelopeObj['weapon'] = selectRandom(weaponsArray)
+    // envelopeObj['room'] = selectRandom(roomsArray)
+    
+    let susFirst = envelopeObj.suspect.firstName;
+    let susLast = envelopeObj.suspect.lastName;
+    let weaponUsed = envelopeObj.weapon.name;
+    let roomKilledIn = envelopeObj.room.name;
+
+    return `${susFirst} ${susLast} killed Mr. Boddy using the ${weaponUsed} in the ${roomKilledIn}!`;
+}
